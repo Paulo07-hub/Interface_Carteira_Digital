@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<ht lang="pt-BR">
+<>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Cadastro</title>
+    <style>
+}
+
+
+input{
+padding:14px;
+border-radius:12px;
+border:1px solid #cccccc80;
+background:#fff;
+font-size:15px;
+transition:0.2s ease;
+}
+
+
+input:focus{
+border-color:#7c3aed;
+box-shadow:0 0 0 3px #7c3aed33;
+outline:none;
+}
+
+
+button{
+width:100%;
+padding:14px;
+margin-top:10px;
+background:#7c3aed;
+color:white;
+border:none;
+border-radius:12px;
+font-size:15px;
+font-weight:600;
+cursor:pointer;
+transition:0.2s ease;
+box-shadow:0 8px 20px rgba(124,58,237,0.25);
+}
+
+
+button:hover{
+background:#6a2ede;
+transform:translateY(-2px);
+box-shadow:0 12px 26px rgba(124,58,237,0.35);
+}
+
+
+@media (max-width:480px){
+.card{padding:24px;}
+h1{font-size:22px;}
+}
+
+
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Cadastro</h1>
+<p>Preencha as informações abaixo.</p>
+
+
+<form>
+<div class="input-group">
+<label for="nome">Nome completo:</label>
+<input type="text" id="nome" placeholder="Digite o seu nome" required>
+</div>
+
+
+<div class="input-group">
+<label for="email">Email:</label>
+<input type="email" id="email" placeholder="@email.com" required>
+</div>
+
+
+<div class="input-group">
+<label for="senha">Senha:</label>
+<input type="password" id="senha" placeholder="Crie uma senha" required>
+</div>
+
+
+<button type="submit">Cadastrar</button>
+</form>
+</div>
+</body>
+</html>

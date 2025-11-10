@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<htm lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Transações</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+.section-title {
+  font-size: 18px;
+  color: #444;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.transaction {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+}
+.transaction:last-child {
+  border-bottom: none;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.name {
+  font-weight: bold;
+  font-size: 16px;
+}
+.date {
+  color: #666;
+  font-size: 14px;
+}
+.value {
+  font-weight: bold;
+  font-size: 16px;
+}
+.entrada {
+  color: green;
+}
+.saida {
+  color: red;
+}
+@media (max-width: 600px) {
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .value {
+    margin-top: 5px;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tela de Transações</h1>
+
+    <div class="section-title">Transações Recebidas</div>
+
+    <div class="transaction">
+      <div class="info">
+        <div class="name">Salário</div>
+        <div class="date">03/11/2025</div>
+        <div class="value entrada">+ AKZ 150.000,00</div>
+      </div>
+    </div>
+
+    <div class="transaction">
+      <div class="info">
+        <div class="name">Transferência - João</div>
+        <div class="date">02/11/2025</div>
+        <div class="value entrada">+ AKZ 5.000,00</div>
+      </div>
+    </div>
+
+    <div class="section-title">Transações Enviadas</div>
+
+    <div class="transaction">
+      <div class="info">
+        <div class="name">Supermercado</div>
+        <div class="date">07/11/2025</div>
+        <div class="value saida">- AKZ 9.450,00</div>
+      </div>
+    </div>
+
+    <div class="transaction">
+      <div class="info">
+        <div class="name">Transferência - Maria</div>
+        <div class="date">05/11/2025</div>
+        <div class="value saida">- AKZ 12.000,00</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
+

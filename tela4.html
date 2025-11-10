@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carteira Digital</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        display: flex;
+        height: 100vh;
+        background: #f3f6fb;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+        width: 230px;
+        background: #0d1b2a;
+        color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transition: 0.3s;
+    }
+
+    .sidebar h2 {
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .menu-item {
+        padding: 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menu-item:hover {
+        background: #1b263b;
+    }
+
+    .icon {
+        font-size: 18px;
+    }
+
+    /* HAMBURGUER MOBILE */
+    .hamburger {
+        display: none;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 26px;
+        background: #0d1b2a;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    /* CONTEÚDO PRINCIPAL */
+    .content {
+        flex: 1;
+        padding: 30px;
+        overflow-y: auto;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+        color: #1b263b;
+    }
+
+    .saldo {
+        background: #0d6efd;
+        color: white;
+        padding: 18px 22px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        font-size: 20px;
+    }
+
+    /* CARDS */
+    .cards {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        width: 260px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.03);
+    }
+
+    .card h3 {
+        margin-bottom: 10px;
+        color: #1b263b;
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 14px;
+        color: #555;
+    }
+
+    /* TRANSAÇÕES */
+    .transactions {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .transactions h3 {
+        margin-bottom: 10px;
+        color: #1b263b;
+    }
+
+    .trans-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .trans-item:last-child {
+        border-bottom: none;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 800px) {
+        .sidebar {
+            position: absolute;
+            left: -250px;
+            height: 100%;
+            z-index: 10;
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
+        .cards {
+            justify-content: center;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<!-- MENU MOBILE -->
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+    <h2>Menu</h2>
+    <div class="menu-item"><span class="icon"></span> Início</div>
+    <div class="menu-item"><span class="icon"></span> Carteira</div>
+    <div class="menu-item"><span class="icon"></span> Configurações</div>
+</div>
+
+<!-- CONTEÚDO PRINCIPAL -->
+<div class="content">
+
+    <div class="header">
+        <h1>Olá, Paulo</h1>
+        <div class="saldo">Saldo: 120.000 Kz</div>
+    </div>
+
+    <!-- CARDS -->
+    <div class="cards">
+
+        <div class="card">
+            <h3>Saldo Atual</h3>
+        </div>
+
+        <div class="card">
+            <h3>Enviar Dinheiro</h3>
+        </div>
+
+        <div class="card">
+            <h3>Receber Dinheiro</h3>
+        </div>
+
+    </div>
+
+    <!-- TRANSAÇÕES -->
+    <div class="transactions">
+        <h3>Transações Recentes</h3>
+    </div>
+
+
+</div>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("sidebar").classList.toggle("open");
+    }
+</script>
+
+</body>
+</html>
